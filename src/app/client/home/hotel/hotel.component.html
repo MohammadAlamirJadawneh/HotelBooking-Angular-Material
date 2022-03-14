@@ -1,0 +1,37 @@
+<div class="card">
+    <h1 *ngIf="!hotels.length">No Results Matching With <u>Your Search </u> </h1>
+    <mat-card class="example-card" *ngFor="let item of hotels">
+        <mat-card-header style="cursor: pointer;">
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{item.hotelName}}</mat-card-title>
+            <mat-card-subtitle> {{item.hotelPrice |currency}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="ImageCard" src="{{ item.hotelImage }}" alt="Photo of Hotel">
+        <mat-card-content>
+            <p>
+                <span><i class="fa fa-building-o"></i><b>&nbsp; Hotel Name :</b></span>
+                <a>{{ item.hotelName }}</a><br><br>
+            </p>
+            <p>
+                <span><i class="fa fa-building-o"></i><b>&nbsp; Hotel Price :</b></span>
+                <a>{{ item.hotelPrice |currency}}</a><br><br>
+            </p>
+            <p>
+                <span><i class="fa fa-building-o"></i><b>&nbsp; Hotel Discount :</b></span>
+                <a>{{ item.hotelDiscount |currency}}</a><br><br>
+            </p>
+            <p>
+                <span><i class="fa fa-building-o"></i><b>&nbsp; Hotel Description :</b></span>
+                <a>{{ item.hotelDescription }}</a><br><br>
+            </p>
+            <p>
+                <span><i class="fa fa-building-o"></i><b>&nbsp; Hotel Rank :</b></span>
+                <a>{{ item.hotelRank }}</a><br><br>
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">LIKE</button>
+            <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

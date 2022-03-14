@@ -1,0 +1,15 @@
+<div class="container">
+    <form class="example-form">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput type="text" [(ngModel)]="SearchByAddress" name="first">
+            <button *ngIf="SearchByAddress" matSuffix mat-icon-button aria-label="Clear"
+                (click)="ClearSearchByAddress()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <span class="example-button-row">
+            <button mat-raised-button type="button" color="primary" (click)="goToCards()">Search</button>
+        </span>
+    </form>
+</div>
