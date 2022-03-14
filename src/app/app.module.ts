@@ -26,7 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NavBarComponent,
     HomeComponent,
     HotelComponent,
-    SearchComponent,
+    SearchComponent
   ],
   imports: [
     AppRoutingModule,
